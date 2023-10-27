@@ -4,7 +4,7 @@ public class Tabuleiro {
 	
 	private Integer linhas = 8;
 	private Integer colunas = 8;
-	private Peca[][] pecas;
+	protected Peca[][] pecas;
 	
 	public Tabuleiro() {
 		this.linhas = linhas;
@@ -32,11 +32,17 @@ public class Tabuleiro {
 		return pecas[x][y];
 	}
 	
+	
 	public Peca[][] getPecas() {
 		return pecas;
 	}
 	public Peca peca(Posicao posicao) {
 		return pecas[posicao.getLinha()][posicao.getColuna()];
+	}
+	
+	public void iniciarPeca(Peca peca, Posicao posicao) {
+		pecas[posicao.getLinha()][posicao.getColuna()] = peca;
+		peca.posicao = posicao;
 	}
 
 	

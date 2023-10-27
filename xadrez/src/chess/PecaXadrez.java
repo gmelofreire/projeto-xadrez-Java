@@ -7,7 +7,7 @@ public class PecaXadrez extends Peca{
 	
 	private Cor cor;
 
-	public PecaXadrez(Tabuleiro tabuleiro, Cor cor, Integer contadorMovimentos) {
+	public PecaXadrez(Tabuleiro tabuleiro, Cor cor) {
 		super(tabuleiro);
 		this.cor = cor;
 	}
