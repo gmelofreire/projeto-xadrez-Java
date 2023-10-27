@@ -1,6 +1,6 @@
 package board;
 
-public class Peca {
+public abstract class Peca {
 	
 	protected Posicao posicao;
 	private Tabuleiro tabuleiro;
