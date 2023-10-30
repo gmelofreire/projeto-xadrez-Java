@@ -27,13 +27,15 @@ public class PartidaXadrez {
 	
 	public void setupInicial() {
 		
+		//Inicialização das peças pretas
 		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.PRETO), new Posicao(0, 0));	
 		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.PRETO), new Posicao(0, 7));	
 		tabuleiro.iniciarPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(0, 4));
 		
-		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.PRETO), new Posicao(7, 0));
-		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.PRETO), new Posicao(7, 7));
-		tabuleiro.iniciarPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(7, 4));	
+		//Inicialização das peças brancas
+		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(7, 0));
+		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(7, 7));
+		tabuleiro.iniciarPeca(new Rei(tabuleiro, Cor.BRANCO), new Posicao(7, 4));	
 	}
 	
 }
