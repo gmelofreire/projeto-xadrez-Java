@@ -72,6 +72,21 @@ public class Tabuleiro {
 		
 	}
 	
+	public Peca removerPeca(Posicao pos) {
+		if(!posicaoExiste(pos)){
+			throw new BoardException("ERRO AO REMOVER PEÇA: POSIÇÃO INFORMADA INVALIDA");
+		}
+		else if (!existePeca(pos)){
+			return null;
+		}
+		else {
+			Peca aux = peca(pos);
+			aux.posicao = null;
+			pecas[pos.getLinha()][pos.getColuna()] = null;
+			return aux;
+		}
+	}
+	
 	
 
 	
