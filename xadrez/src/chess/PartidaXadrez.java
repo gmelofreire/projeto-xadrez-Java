@@ -1,5 +1,6 @@
 package chess;
 
+import board.Peca;
 import board.Posicao;
 import board.Tabuleiro;
 import chess.pecas.Rei;
@@ -25,17 +26,21 @@ public class PartidaXadrez {
 		
 	}
 	
+	public void iniciarPeca(char coluna, int linha, Peca peca) {
+		tabuleiro.iniciarPeca(peca, new PosicaoXadrez(coluna, linha).paraPosicao());
+	}
+	
 	public void setupInicial() {
 		
 		//Inicialização das peças pretas
-		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.PRETO), new Posicao(0, 0));	
-		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.PRETO), new Posicao(0, 7));	
-		tabuleiro.iniciarPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(0, 4));
+		iniciarPeca('a', 8, new Torre(tabuleiro, Cor.PRETO));
+		iniciarPeca('h', 8, new Torre(tabuleiro, Cor.PRETO));	
+		iniciarPeca('e', 8, new Rei(tabuleiro, Cor.PRETO));
 		
 		//Inicialização das peças brancas
-		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(7, 0));
-		tabuleiro.iniciarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(7, 7));
-		tabuleiro.iniciarPeca(new Rei(tabuleiro, Cor.BRANCO), new Posicao(7, 4));	
+		iniciarPeca('a', 1, new Torre(tabuleiro, Cor.BRANCO));
+		iniciarPeca('h', 1, new Torre(tabuleiro, Cor.BRANCO));
+		iniciarPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));	
 	}
 	
 }
